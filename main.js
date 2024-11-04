@@ -14,7 +14,6 @@
 /*** Event Listeners ***/
 
 
-
 /*** Functions ***/
 
 // A very accurate rounding function
