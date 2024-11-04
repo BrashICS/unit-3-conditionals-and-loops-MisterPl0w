@@ -163,3 +163,21 @@ function basement() {
 function flynn() {
     alert("The story is incomplete...")
 }
+
+
+function if_else_test() {
+    let rnd = randInt(1, 100);
+
+    console.log(`Let's classify the number ${rnd}.`);
+
+    if (rnd <= 10) {
+        console.log(`${rnd} is less than or equal to 10`);
+    } else if (rnd < 50) {
+        console.log(`${rnd} is greater than 10 but less than 50`);
+    } else if (rnd <= 75) {
+        console.log(`${rnd} is between 50 and 75 (inclusive)`);
+    } else if (rnd <= 100) {
+        console.log(`${rnd} is greater than 75 but less than or equal to 100`);
+    }
+}
+
