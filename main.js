@@ -184,3 +184,35 @@ function if_else_test() {
 function is_number(num) {
     return typeof num == "number";
 }
+
+
+
+
+function menu() {
+    // Setup the menu
+    let message = `Hi! Please make a selection:
+    1 - Play
+    2 - Options
+    3 - DLC
+    4 - Check for Updates
+    5 - Exit`
+    let selection = Number(prompt(message));
+    if (selection == 1) {
+        alert("Let's Play!")
+        let difficulty = +prompt(`Select a difficulty:
+            1 - Easy
+            2 - Medium
+            3 - Hard`)
+
+        alert("You selected: " + difficulty)
+    } else if (selection == 2) {
+        alert("You selected Options.")
+    } else if (selection == 3) {
+        alert("No new DLC at this time.")
+    } else if (selection == 4) {
+        alert("Everything is up to date.")
+    } else if (selection == 5) {
+        alert("Bye!")
+    }
+}
+
