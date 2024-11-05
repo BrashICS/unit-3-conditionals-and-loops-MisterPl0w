@@ -181,3 +181,6 @@ function if_else_test() {
     }
 }
 
+function is_number(num) {
+    return typeof num == "number";
+}
