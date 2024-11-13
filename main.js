@@ -216,3 +216,35 @@ function menu() {
     }
 }
 
+function average(n) {
+    let avg = 0;
+    let count = 1;
+    
+    while (count <= n) {
+        avg = avg + Number(prompt(`Please enter value ${count}/${n}`));
+        count++;
+    }
+
+    avg = round(avg / n, 1);
+    console.log(`The average is ${avg}`);
+}
+
+
+function random_until(min, max, stop) {
+    // Error checking
+    if (stop < min || stop > max || max <= min) {
+        return -1;
+    }
+
+    // Generate the first random number
+    let rnd = randInt(min, max);
+    
+    // Check to see if it's the stop value
+    while (rnd != stop) {
+        console.log(rnd);
+        rnd = randInt(min, max);
+    }
+
+    // Return 
+    return stop;    
+}
