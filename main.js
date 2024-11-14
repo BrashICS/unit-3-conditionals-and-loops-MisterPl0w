@@ -248,3 +248,60 @@ function random_until(min, max, stop) {
     // Return 
     return stop;    
 }
+
+
+
+function count(str, letter) {
+    let i = 0;
+    let c = 0;
+    while (i < str.length) {
+        if (str[i] == letter) {
+            c++;
+        }
+        i++;
+    }
+    return c;
+}
+
+function print_reverse(str) {
+    // Start with a blank string to build up
+    let output = "";
+
+    // Loop through the given string from the END and build the output
+    let i = str.length - 1
+    while (i >= 0) {
+        output = output + str[i];
+        i--;
+    }
+    console.log(output);
+}
+
+function dragons_and_goblins(str) {
+    let dragons = 0;
+    let goblins = 0;
+
+    let i = 0;
+    while (i < str.length) {
+        if (str[i].toLowerCase() == "d") {
+            dragons = dragons + 1;
+        } else if (str[i].toLowerCase() == "g") {
+            goblins = goblins + 1;
+        }
+        i = i + 1;
+    }
+    console.log(`Dragons: ${dragons} Goblins: ${goblins}`);
+}
+
+
+// duplicate the string as many times as requested
+function duplicate(str, number_of_times) {
+    let output = "";    // Empty string for building
+    let count = 1;
+  
+    while (count <= number_of_times) {
+      output = output + str;
+      count++;
+    }
+  
+    return output;
+}
