@@ -249,8 +249,6 @@ function random_until(min, max, stop) {
     return stop;    
 }
 
-
-
 function count(str, letter) {
     let i = 0;
     let c = 0;
@@ -292,7 +290,6 @@ function dragons_and_goblins(str) {
     console.log(`Dragons: ${dragons} Goblins: ${goblins}`);
 }
 
-
 // duplicate the string as many times as requested
 function duplicate(str, number_of_times) {
     let output = "";    // Empty string for building
@@ -304,4 +301,65 @@ function duplicate(str, number_of_times) {
     }
   
     return output;
+}
+
+
+function build_string() {
+    let output = "";
+    let input;
+    do {
+      input = prompt("Enter a string of text or a single 'q' to quit: ");
+      output += input;
+    } while (input.toLowerCase() != "q");
+  
+    return output;
+}
+
+// Note to self, there are two typos in the readme
+// for the do...while loop examples.
+// This one and Parrot
+function print_odd(n) {
+    // verify input
+    if (isNaN(n) || n < 1 || n % 1 != 0) return;
+    let i = 1;
+    do {
+        console.log(i);
+        i = i + 2;
+    } while (i <= n);
+
+}
+
+// Ask until we get a negative number
+function negative_only() {
+    let input;
+
+    do {
+        input = +prompt("Enter a negative number.");
+    } while (input >= 0 || isNaN(input))
+
+    return input;
+}
+
+function parrot() {
+    let input = null;
+    do {
+        if (input != null) {
+            console.log(input.toUpperCase());
+        }
+        input = prompt("Enter some text or 'quit' to end.");
+    } while (input.toLowerCase() != "quit");
+
+    console.log("GOODBYE! 🦜");
+}
+
+function factorial(n) {
+    if (isNaN(n) || n < 0) return -1;
+
+    let multiplier = 1;
+    let product = 1;
+    do {
+        product *= multiplier++;
+    } while (multiplier <= n);
+
+    return product;
 }
