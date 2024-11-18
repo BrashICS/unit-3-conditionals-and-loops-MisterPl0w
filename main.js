@@ -363,3 +363,8 @@ function factorial(n) {
 
     return product;
 }
+
+// This is the declaration of a function
+function sample(this, that) {
+
+}
