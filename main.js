@@ -364,7 +364,63 @@ function factorial(n) {
     return product;
 }
 
-// This is the declaration of a function
-function sample(this, that) {
+function count_up(start, stop) {
+    if (isNaN(start * stop)) return -1;
+    if (start > stop) return -1;
 
+    for (start; start <= stop; start++) {
+        console.log(start);
+    }
+}
+
+function count_down(start, stop) {
+    if (isNaN(start * stop)) return -1;
+    if (start < stop) return -1;
+
+    for (start; start >= stop; start--) {
+        console.log(start);
+    }
+}
+
+function print_chars(str, step) {
+    if (step <= 0 || isNaN(step)) return -1;
+    for (let i = 0; i < str.length; i+= step) {
+        console.log(str[i]);
+    }
+}
+
+
+function sum(n) {
+    if (n < 1 || isNaN(n)) return -1;
+
+    let s = 0;
+    for (let i = 1; i <= n; i++) {
+        s += i;
+    }
+
+    return s;
+}
+
+function count4(begin, end) {
+    if (begin > end || isNaN(begin * end)) return -1;
+    let count = 0;
+    for (let i = begin; i <= end; i++) {
+        if (i % 4 == 0) {
+            count++;
+        }
+    }
+    return count;
+}
+
+function sum_divisible(n, x) {
+    if (n < 0 || isNaN(n * x)) return -1;
+
+    let count = 0;
+    for (n; n >= 0; n--) {
+        if (n % x == 0) {
+            count += n;
+        }
+    }
+
+    return count;
 }
